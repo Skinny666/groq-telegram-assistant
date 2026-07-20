@@ -1,0 +1,37 @@
+name: Relatar bug
+description: Informe um comportamento reproduzível sem expor dados privados.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Não inclua tokens, chaves, IDs privados, conteúdo real da agenda ou logs sem sanitização.
+  - type: input
+    id: version
+    attributes:
+      label: Versão ou commit
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Comportamento observado
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento esperado
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Passos para reproduzir
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs sanitizados
+      description: Remova tokens, chaves, IDs, hostnames e conteúdo privado.

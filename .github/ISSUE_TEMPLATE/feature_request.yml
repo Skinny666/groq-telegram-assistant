@@ -1,0 +1,23 @@
+name: Sugerir melhoria
+description: Proponha uma funcionalidade ou ajuste.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema
+      description: Qual dificuldade concreta deve ser resolvida?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposta
+    validations:
+      required: true
+  - type: textarea
+    id: security
+    attributes:
+      label: Impacto de segurança e privacidade
+      description: Explique se a proposta altera confirmações, dados enviados à Groq, credenciais ou permissões.

@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "telegram-assistant-secure"
+version = "0.4.0"
+description = "Assistente privado e seguro de agenda via Telegram, Groq e SQLite."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "luaan" }]
+keywords = ["telegram", "groq", "calendar", "sqlite", "systemd", "assistant"]
+requires-python = ">=3.12,<3.13"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Communications :: Chat",
+]
+dependencies = [
+    "python-telegram-bot==22.8",
+    "httpx==0.28.1",
+]
+
+[project.scripts]
+telegram-assistant-bot = "telegram_assistant.bot:main"
+telegram-assistant-reminder = "telegram_assistant.reminder_worker:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.coverage.run]
+branch = true
+source = ["telegram_assistant"]
