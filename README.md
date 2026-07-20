@@ -200,8 +200,6 @@ Controles principais:
 - serviços sem porta pública;
 - limites de CPU, memória, processos e arquivos no `systemd`.
 
-Leia [SECURITY.md](SECURITY.md) e [THREAT_MODEL.md](THREAT_MODEL.md) antes de expor o projeto a outros usuários.
-
 ## Limitações conhecidas
 
 - O projeto foi desenhado para um único usuário autorizado.
